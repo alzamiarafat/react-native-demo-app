@@ -1,25 +1,41 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react';
+import { Link } from '@react-navigation/native';
 import { FontAwesome, Feather, AntDesign } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from '../screens/Home';
+import Search from '../screens/Search';
 
-export default function Footer(props) {
-    console.log(props);
+
+
+const Tab = createBottomTabNavigator();
+
+export default function Footer() {
 
     return (
-        <View style={styles.footerContainer}>
-            <TouchableOpacity style={styles.items} onPress={() => props.navigation.navigate('Home')}>
-                <Feather name="home" size={24} color="green" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.items} onPress={() => props.navigation.navigate('Home')}>
-                <AntDesign name="search1" size={24} color="green" />
-            </TouchableOpacity>
-            <View style={styles.items}>
-                <Feather name="tag" size={24} color="green" />
-            </View>
-            <View style={styles.items}>
-                <FontAwesome name="user-o" size={24} color="green" />
-            </View>
-        </View>
+        <Tab.Navigator>
+            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Search" component={Search} />
+        </Tab.Navigator>
+
+        // <View style={styles.footerContainer}>
+        //     <TouchableOpacity style={styles.items}>
+        //         <Link to={{ screen: 'Home', params: { id: 'jane' } }}>
+        //             <Feather name="home" size={24} color="green" />
+        //         </Link>
+        //     </TouchableOpacity>
+        //     <TouchableOpacity style={styles.items}>
+        //         <Link to={{ screen: 'Search', params: { id: 'jane' } }}>
+        //             <AntDesign name="search1" size={24} color="green" />
+        //         </Link>
+        //     </TouchableOpacity>
+        //     <View style={styles.items}>
+        //         <Feather name="tag" size={24} color="green" />
+        //     </View>
+        //     <View style={styles.items}>
+        //         <FontAwesome name="user-o" size={24} color="green" />
+        //     </View>
+        // </View>
     )
 }
 

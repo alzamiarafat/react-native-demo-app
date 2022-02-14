@@ -4,13 +4,17 @@ import React from 'react'
 export default function Header() {
     return (
         <View style={styles.header}>
-            <Text style={{ fontSize: 20 }}>Header</Text>
+            <Text style={{ fontSize: 20, textAlign: 'center', fontWeight: 'bold' }}>Demo App</Text>
         </View>
     )
 }
 const styles = StyleSheet.create({
     header: {
-        padding: 10,
-        backgroundColor: '#0707',
+        // paddingHorizontal: 10,
+        borderBottomColor: 'lightgray',
+        borderStyle: 'solid',
+        borderBottomWidth: 1,
+        paddingBottom: 10
+
     },
 });
