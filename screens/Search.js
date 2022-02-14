@@ -2,9 +2,12 @@ import { View, StatusBar, KeyboardAvoidingView, TextInput, ScrollView, StyleShee
 import React, { useState } from 'react';
 import Header from '../componants/Header';
 import { AntDesign } from '@expo/vector-icons';
+import { Video } from 'expo-av';
 
 export default function Search() {
     const [searchValue, setSearchValue] = useState()
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
     return (
         <View style={styles.container}>
             <Header></Header>
@@ -26,8 +29,105 @@ export default function Search() {
                     <Image source={{ uri: "https://images.unsplash.com/photo-1544526226-d4568090ffb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
-                    <Image source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
-                    <Image source={{ uri: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
+                    <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                    <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
+                    <Image source={{ uri: "https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
+                    <Image source={{ uri: "https://www.mmppicture.co.in/wp-content/uploads/2020/09/Background-1-802x1080.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                    <Image source={{ uri: "https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
                     <Image source={{ uri: "https://www.w3schools.com/howto/img_forest.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
@@ -42,7 +142,18 @@ export default function Search() {
                     <Image source={{ uri: "https://f.hubspotusercontent00.net/hubfs/53/image-file-extensions.jpg" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
-                    <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{
+                            uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="cover"
+                        isLooping
+                        shouldPlay
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
                     <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJfZxdWK4TSK8xQiMzv3Q-fkKQI0fg_lDG4bssfK9lUtV0YYYzqFtZcKuH8ozBqfSuXo&usqp=CAU" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
@@ -83,5 +194,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         paddingTop: 10,
         borderRadius: 10
+    },
+    video: {
+        flex: 4, width: 200, height: 159, marginRight: 5
     },
 });

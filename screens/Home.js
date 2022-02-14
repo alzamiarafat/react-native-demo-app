@@ -102,7 +102,7 @@ export default function Home() {
                         </View>
                     </View>
                 </View>
-                <View style={{ marginRight: 10, marginBottom: 10, borderBottomWidth: 1, borderBottomColor: 'lightgray' }}>
+                <View style={{ marginRight: 10, marginBottom: 60 }}>
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <Image source={{ uri: "https://i.pinimg.com/280x280_RS/8d/3e/cd/8d3ecd98d283dce2dd722a953018334d.jpg" }} style={{ borderRadius: 50, width: 55, height: 55 }} />
                         <View style={{ flex: 1, flexDirection: 'column', marginLeft: 10 }}>
