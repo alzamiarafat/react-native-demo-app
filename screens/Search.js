@@ -1,9 +1,9 @@
-import { View, StatusBar, KeyboardAvoidingView, ImageBackground, TextInput, ScrollView, StyleSheet, Image, TouchableOpacity, Text, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { View, StatusBar, KeyboardAvoidingView, TextInput, ScrollView, StyleSheet, Image, Text, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import React, { useState } from 'react';
 import Header from '../componants/Header';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function Search(props) {
+export default function Search() {
     const [searchValue, setSearchValue] = useState()
     return (
         <View style={styles.container}>
