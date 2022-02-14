@@ -11,8 +11,12 @@ export default function Main() {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
+                tabBarStyle: {
+                    height: 75,
+                    paddingBottom: 15,
+                },
                 headerShown: false,
-                tabBarIcon: ({ focused, color, size }) => {
+                tabBarIcon: ({ focused, color }) => {
                     let iconName;
 
                     if (route.name === 'Home') {
@@ -30,10 +34,13 @@ export default function Main() {
                     }
 
                     // You can return any component that you like here!
-                    return <AntDesign name={iconName} size={size} color={color} />;
+                    return <AntDesign name={iconName} size={27} color={color} />;
                 },
                 tabBarActiveTintColor: 'tomato',
                 tabBarInactiveTintColor: 'gray',
+                tabBarLabelStyle: {
+                    fontSize: 15,
+                },
             })}
         >
             <Tab.Screen name="Home" component={Home} />

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, StatusBar, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 
 export default function Header() {
@@ -10,11 +10,9 @@ export default function Header() {
 }
 const styles = StyleSheet.create({
     header: {
-        // paddingHorizontal: 10,
         borderBottomColor: 'lightgray',
         borderStyle: 'solid',
         borderBottomWidth: 1,
-        paddingBottom: 10
-
+        padding: 15,
     },
 });
