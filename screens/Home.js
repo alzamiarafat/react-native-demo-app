@@ -38,6 +38,7 @@ export default function Home() {
                             resizeMode="cover"
                             isLooping
                             shouldPlay
+                            isMuted={true}
                             onPlaybackStatusUpdate={status => setStatus(() => status)}
                         />
                         <View style={{ flex: 1, flexDirection: 'row', marginVertical: 10 }}>

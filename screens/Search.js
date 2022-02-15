@@ -40,6 +40,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                 </View>
@@ -54,6 +55,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                     <Video
@@ -66,6 +68,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                 </View>
@@ -80,6 +83,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                     <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
@@ -96,6 +100,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                 </View>
@@ -111,6 +116,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                 </View>
@@ -125,6 +131,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                     <Image source={{ uri: "https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
@@ -152,6 +159,7 @@ export default function Search() {
                         resizeMode="cover"
                         isLooping
                         shouldPlay
+                        isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
                     <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJfZxdWK4TSK8xQiMzv3Q-fkKQI0fg_lDG4bssfK9lUtV0YYYzqFtZcKuH8ozBqfSuXo&usqp=CAU" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
