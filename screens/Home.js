@@ -1,9 +1,26 @@
-import { View, Image, Text, StyleSheet, StatusBar, ScrollView } from 'react-native'
+import { View, Image, Text, StyleSheet, StatusBar, ScrollView, Dimensions } from 'react-native'
 import React from 'react';
 import Header from '../componants/Header';
 import { AntDesign, Feather, Ionicons } from '@expo/vector-icons';
 import { Video } from 'expo-av';
+import Carousel, { PaginationLight } from 'react-native-x-carousel';
 
+const { width } = Dimensions.get('window');
+
+const DATA = [
+    {
+        coverImageUri: 'https://user-images.githubusercontent.com/6414178/73920321-2357b680-4900-11ea-89d5-2e8cbecec9f6.jpg',
+    },
+    {
+        coverImageUri: 'https://user-images.githubusercontent.com/6414178/73920358-336f9600-4900-11ea-8eec-cc919b991e90.jpg',
+    },
+    {
+        coverImageUri: 'https://user-images.githubusercontent.com/6414178/73927874-25744200-490d-11ea-940f-db3e5dbd8b2b.jpg',
+    },
+    {
+        coverImageUri: 'https://user-images.githubusercontent.com/6414178/73920399-45e9cf80-4900-11ea-9d5b-743fe5e8b9a4.jpg',
+    },
+];
 
 export default function Home() {
     const video = React.useRef(null);
@@ -15,15 +32,64 @@ export default function Home() {
         else setIsLiked(true)
     }
 
+    const renderItem = data => (
+        <View
+            key={data.coverImageUri}
+            style={styles.cardContainer}
+        >
+            <View
+                style={styles.cardWrapper}
+            >
+                <Image
+                    style={styles.card}
+                    source={{ uri: data.coverImageUri }}
+                />
+            </View>
+        </View>
+    );
+
     return (
         <View style={styles.container}>
             <Header></Header>
+
             <ScrollView style={styles.bodyContainer}>
+
                 <View style={{ marginRight: 10, marginBottom: 10, borderBottomWidth: 1, borderBottomColor: 'lightgray' }}>
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncxHwv7BXAjmaSBtTzrsp1mVdUkJGEKrUuA&usqp=CAU" }} style={{ borderRadius: 50, width: 55, height: 55 }} />
                         <View style={{ flex: 1, flexDirection: 'column', marginLeft: 10 }}>
                             <Text style={{ fontSize: 17, fontWeight: 'bold', marginTop: 4, }}>Maria Hess</Text>
+                            <Text style={{ fontSize: 17, color: 'gray' }}>Dhaka,Bangladesh</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ marginTop: 10 }}>
+                        <View style={styles.containe}>
+                            <Carousel
+                                pagination={PaginationLight}
+                                renderItem={renderItem}
+                                data={DATA}
+                                loop
+                                autoplay
+                            />
+                        </View>
+                        <View style={{ flex: 1, flexDirection: 'row', marginVertical: 10 }}>
+                            <Feather name="message-circle" size={24} color="gray" style={{ paddingHorizontal: 10 }} />
+                            {
+                                Isliked ?
+                                    <AntDesign name="like2" size={24} color="gray" style={{ paddingHorizontal: 10 }} onPress={handleLike} /> :
+                                    <AntDesign name="like1" size={24} color="blue" style={{ paddingHorizontal: 10 }} onPress={handleLike} />
+                            }
+                            <Ionicons name="bookmark-outline" size={24} color="gray" style={{ paddingHorizontal: 10 }} />
+                        </View>
+                    </View>
+                </View>
+
+                <View style={{ marginRight: 10, marginBottom: 10, borderBottomWidth: 1, borderBottomColor: 'lightgray' }}>
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        <Image source={{ uri: "https://www.pixinvent.com/materialize-material-design-admin-template/laravel/demo-4/images/avatar/avatar-7.png" }} style={{ borderRadius: 50, width: 55, height: 55 }} />
+                        <View style={{ flex: 1, flexDirection: 'column', marginLeft: 10 }}>
+                            <Text style={{ fontSize: 17, fontWeight: 'bold', marginTop: 4, }}>John Deo</Text>
                             <Text style={{ fontSize: 17, color: 'gray' }}>Dhaka,Bangladesh</Text>
                         </View>
                     </View>
@@ -43,15 +109,12 @@ export default function Home() {
                         />
                         <View style={{ flex: 1, flexDirection: 'row', marginVertical: 10 }}>
                             <Feather name="message-circle" size={24} color="gray" style={{ paddingHorizontal: 10 }} />
-                            {
-                                Isliked ?
-                                    <AntDesign name="like2" size={24} color="gray" style={{ paddingHorizontal: 10 }} onPress={handleLike} /> :
-                                    <AntDesign name="like1" size={24} color="blue" style={{ paddingHorizontal: 10 }} onPress={handleLike} />
-                            }
+                            <AntDesign name="like2" size={24} color="gray" style={{ paddingHorizontal: 10 }} />
                             <Ionicons name="bookmark-outline" size={24} color="gray" style={{ paddingHorizontal: 10 }} />
                         </View>
                     </View>
                 </View>
+
                 <View style={{ marginRight: 10, marginBottom: 10, borderBottomWidth: 1, borderBottomColor: 'lightgray' }}>
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <Image source={{ uri: "https://www.pixinvent.com/materialize-material-design-admin-template/laravel/demo-4/images/avatar/avatar-7.png" }} style={{ borderRadius: 50, width: 55, height: 55 }} />
@@ -139,5 +202,24 @@ const styles = StyleSheet.create({
     video: {
         width: '100%',
         height: 200,
+    },
+    containe: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginRight: 20
+    },
+    cardContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width,
+    },
+    cardWrapper: {
+        overflow: 'hidden',
+    },
+    card: {
+        width: width * 1,
+        height: width * 0.5,
     },
 });

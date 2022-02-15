@@ -12,7 +12,7 @@ export default function ProfileHeader() {
             <LinearGradient colors={['#FA7760', 'transparent']} style={styles.background}>
                 <View style={{ alignItems: 'center', marginTop: '5%' }}>
                     <View style={{ borderColor: 'white', borderStyle: 'solid', borderWidth: 3, padding: 4, borderRadius: 70 }}>
-                        <Image source={{ uri: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" }} style={{ width: 120, height: 120, borderRadius: 60 }} />
+                        <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncxHwv7BXAjmaSBtTzrsp1mVdUkJGEKrUuA&usqp=CAU" }} style={{ width: 120, height: 120, borderRadius: 60 }} />
                     </View>
                 </View>
                 <Text style={{ textAlign: 'center', fontSize: 20, marginTop: 10, fontWeight: 'bold' }}>John Deo</Text>

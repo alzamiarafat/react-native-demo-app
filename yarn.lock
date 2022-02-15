@@ -4662,6 +4662,11 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
+"react-native-x-carousel@^1.0.1":
+  "integrity" "sha512-HioYKgsW7RS6EZzVlcLK0PUn/2gk1EF1gv1fCydEEBiGnYjxhtuG+ZKphE2Y4VKRIV4OqgSi3uwPUo1wcR3dvQ=="
+  "resolved" "https://registry.npmjs.org/react-native-x-carousel/-/react-native-x-carousel-1.0.1.tgz"
+  "version" "1.0.1"
+
 "react-native@*", "react-native@>=0.44", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.3":
   "integrity" "sha512-2OEU74U0Ek1/WeBzPbg6XDsCfjF/9fhrNX/5TFgEiBKd5mNc9LOZ/OlMmkb7iues/ZZ/oc51SbEfLRQdcW0fVw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.3.tgz"
