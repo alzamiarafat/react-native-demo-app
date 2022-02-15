@@ -10,15 +10,16 @@ export default function Profile() {
         <View style={styles.container}>
             <Header></Header>
             <ProfileHeader />
-            <ScrollView>
-                <View style={{ marginTop: 45, backgroundColor: 'white', padding: 10 }}>
+            <ScrollView style={{ marginTop: 50 }}>
+                <View style={{ backgroundColor: 'white', padding: 10, marginBottom: 50, }}>
                     <View style={{ flexDirection: 'row', paddingHorizontal: 10, padding: 5 }}>
                         <Text style={{ fontSize: 17, paddingRight: 5 }}>
                             <AntDesign name="user" size={20} color="gray" />
                         </Text>
                         <Text style={{ fontSize: 17, color: 'gray' }}>Name</Text>
                     </View>
-                    <Text style={{ fontSize: 17, color: 'black', marginBottom: 10, paddingHorizontal: 10 }}>John Deo</Text>
+                    <Text style={{ fontSize: 17, color: 'black', marginBottom: 8, paddingHorizontal: 10 }}>Maria Hess</Text>
+                    <View style={{ borderBottomColor: 'lightgray', borderBottomWidth: 1, borderStyle: 'solid', marginBottom: 8, }}></View>
 
                     <View style={{ flexDirection: 'row', paddingHorizontal: 10, padding: 5 }}>
                         <Text style={{ fontSize: 17, paddingRight: 5 }}>
@@ -27,6 +28,7 @@ export default function Profile() {
                         <Text style={{ fontSize: 17, color: 'gray' }}>Contact Number</Text>
                     </View>
                     <Text style={{ fontSize: 17, color: 'black', marginBottom: 10, paddingHorizontal: 10 }}>0170000000</Text>
+                    <View style={{ borderBottomColor: 'lightgray', borderBottomWidth: 1, borderStyle: 'solid', marginBottom: 8, }}></View>
 
                     <View style={{ flexDirection: 'row', paddingHorizontal: 10, padding: 5 }}>
                         <Text style={{ fontSize: 17, paddingRight: 5 }}>
@@ -34,7 +36,17 @@ export default function Profile() {
                         </Text>
                         <Text style={{ fontSize: 17, color: 'gray' }}>Email Address</Text>
                     </View>
-                    <Text style={{ fontSize: 17, color: 'black', marginBottom: 10, paddingHorizontal: 10 }}>john@example.com</Text>
+                    <Text style={{ fontSize: 17, color: 'black', marginBottom: 10, paddingHorizontal: 10 }}>maria@example.com</Text>
+                    <View style={{ borderBottomColor: 'lightgray', borderBottomWidth: 1, borderStyle: 'solid', marginBottom: 8, }}></View>
+
+                    <View style={{ flexDirection: 'row', paddingHorizontal: 10, padding: 5 }}>
+                        <Text style={{ fontSize: 17, paddingRight: 5 }}>
+                            <Ionicons name="mail-open-outline" size={20} color="gray" />
+                        </Text>
+                        <Text style={{ fontSize: 17, color: 'gray' }}>Email Address</Text>
+                    </View>
+                    <Text style={{ fontSize: 17, color: 'black', marginBottom: 10, paddingHorizontal: 10 }}>maria@example.com</Text>
+                    <View style={{ borderBottomColor: 'lightgray', borderBottomWidth: 1, borderStyle: 'solid', marginBottom: 8, }}></View>
 
                     <View style={{ flexDirection: 'row', paddingHorizontal: 10, padding: 5 }}>
                         <Text style={{ fontSize: 17, paddingRight: 5 }}><Entypo name="address" size={20} color="gray" /></Text>

@@ -49,7 +49,13 @@ export default function Home() {
     );
 
     return (
+
         <View style={styles.container}>
+            <StatusBar
+                translucent
+                barStyle="light-content"
+                backgroundColor='#66B57C'
+            />
             <Header></Header>
 
             <ScrollView style={styles.bodyContainer}>

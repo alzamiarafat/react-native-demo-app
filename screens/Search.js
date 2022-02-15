@@ -5,7 +5,6 @@ import { AntDesign } from '@expo/vector-icons';
 import { Video } from 'expo-av';
 
 export default function Search() {
-    const [searchValue, setSearchValue] = useState()
     const video = React.useRef(null);
     const [status, setStatus] = React.useState({});
     return (
@@ -32,7 +31,7 @@ export default function Search() {
                     <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
                     <Video
                         ref={video}
-                        style={styles.video}
+                        style={[styles.video, styles.rightVideo]}
                         source={{
                             uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
                         }}
@@ -60,7 +59,7 @@ export default function Search() {
                     />
                     <Video
                         ref={video}
-                        style={styles.video}
+                        style={[styles.video, styles.rightVideo]}
                         source={{
                             uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
                         }}
@@ -86,13 +85,13 @@ export default function Search() {
                         isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
-                    <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Image source={{ uri: "https://st.depositphotos.com/1006706/2671/i/600/depositphotos_26715369-stock-photo-which-way-to-choose-3d.jpg" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
                     <Image source={{ uri: "https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
                     <Video
                         ref={video}
-                        style={styles.video}
+                        style={[styles.video, styles.rightVideo]}
                         source={{
                             uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
                         }}
@@ -108,7 +107,7 @@ export default function Search() {
                     <Image source={{ uri: "https://www.mmppicture.co.in/wp-content/uploads/2020/09/Background-1-802x1080.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
                     <Video
                         ref={video}
-                        style={styles.video}
+                        style={[styles.video, styles.rightVideo]}
                         source={{
                             uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
                         }}
@@ -134,7 +133,7 @@ export default function Search() {
                         isMuted={true}
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
                     />
-                    <Image source={{ uri: "https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
+                    <Image source={{ uri: "https://images.unsplash.com/photo-1592743263126-bb241ee76ac7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80" }} style={{ flex: 4, width: 200, height: 159, marginLeft: 5 }} />
                 </View>
                 <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', margin: 10 }}>
                     <Image source={{ uri: "https://www.w3schools.com/howto/img_forest.jpg" }} style={{ flex: 4, width: 200, height: 159, marginRight: 5 }} />
@@ -204,6 +203,12 @@ const styles = StyleSheet.create({
         borderRadius: 10
     },
     video: {
-        flex: 4, width: 200, height: 159, marginRight: 5
+        flex: 4,
+        width: 200,
+        height: 159,
+        marginRight: 5
+    },
+    rightVideo: {
+        marginLeft: 5
     },
 });
