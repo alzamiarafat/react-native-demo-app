@@ -33,6 +33,7 @@ export default function Setting() {
                         </CollapseHeader>
                         <CollapseBody>
                             <Text>Ta daa!</Text>
+                            <Text>Ta daa!</Text>
                         </CollapseBody>
                     </Collapse>
                     <View style={{ borderBottomColor: 'lightgray', borderBottomWidth: 1, borderStyle: 'solid', margin: 10, marginBottom: 0 }}></View>
