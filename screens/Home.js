@@ -22,7 +22,7 @@ const DATA = [
     },
 ];
 
-export default function Home() {
+export default function Home({ navigation }) {
     const video = React.useRef(null);
     const [status, setStatus] = React.useState({});
     const [Isliked, setIsLiked] = React.useState(false);
@@ -56,7 +56,7 @@ export default function Home() {
                 barStyle="light-content"
                 backgroundColor='#66B57C'
             />
-            <Header></Header>
+            <Header navigation={navigation}></Header>
 
             <ScrollView style={styles.bodyContainer}>
 

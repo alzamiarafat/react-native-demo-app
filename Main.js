@@ -9,53 +9,53 @@ import Login from './screens/auth/Login';
 
 
 export default function Main() {
-    const [isLoggedIn, setIsLoggedIn] = useState(true)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     const Tab = createBottomTabNavigator();
     return (
         <>
-            {
-                isLoggedIn ?
-                    <Login></Login> :
-                    <Tab.Navigator
-                        screenOptions={({ route }) => ({
-                            tabBarStyle: {
-                                height: 75,
-                                paddingBottom: 15,
-                            },
-                            headerShown: false,
-                            tabBarIcon: ({ focused, color }) => {
-                                let iconName;
+            {/* {
+                !isLoggedIn ?
+                    <Login></Login> : */}
+            <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    tabBarStyle: {
+                        height: 75,
+                        paddingBottom: 15,
+                    },
+                    headerShown: false,
+                    tabBarIcon: ({ focused, color }) => {
+                        let iconName;
 
-                                if (route.name === 'Home') {
-                                    iconName = focused
-                                        ? 'home'
-                                        : 'home';
-                                } else if (route.name === 'Search') {
-                                    iconName = focused ? 'search1' : 'search1';
+                        if (route.name === 'Home') {
+                            iconName = focused
+                                ? 'home'
+                                : 'home';
+                        } else if (route.name === 'Search') {
+                            iconName = focused ? 'search1' : 'search1';
 
-                                } else if (route.name === 'Profile') {
-                                    iconName = focused ? 'user' : 'user';
+                        } else if (route.name === 'Profile') {
+                            iconName = focused ? 'user' : 'user';
 
-                                } else if (route.name === 'Setting') {
-                                    iconName = focused ? 'setting' : 'setting';
-                                }
+                        } else if (route.name === 'Setting') {
+                            iconName = focused ? 'setting' : 'setting';
+                        }
 
-                                // You can return any component that you like here!
-                                return <AntDesign name={iconName} size={27} color={color} />;
-                            },
-                            tabBarActiveTintColor: '#66B57C',
-                            tabBarInactiveTintColor: 'gray',
-                            tabBarLabelStyle: {
-                                fontSize: 15,
-                            },
-                        })}
-                    >
-                        <Tab.Screen name="Home" component={Home} />
-                        <Tab.Screen name="Search" component={Search} />
-                        <Tab.Screen name="Profile" component={Profile} />
-                        <Tab.Screen name="Setting" component={Setting} />
-                    </Tab.Navigator>
-            }
+                        // You can return any component that you like here!
+                        return <AntDesign name={iconName} size={27} color={color} />;
+                    },
+                    tabBarActiveTintColor: '#66B57C',
+                    tabBarInactiveTintColor: 'gray',
+                    tabBarLabelStyle: {
+                        fontSize: 15,
+                    },
+                })}
+            >
+                <Tab.Screen name="Home" component={Home} />
+                <Tab.Screen name="Search" component={Search} />
+                <Tab.Screen name="Profile" component={Profile} />
+                <Tab.Screen name="Setting" component={Setting} />
+            </Tab.Navigator>
+            {/* } */}
         </>
     )
 }

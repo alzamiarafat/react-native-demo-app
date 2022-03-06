@@ -1,10 +1,14 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react';
-import { Ionicons, Feather } from '@expo/vector-icons';
+import { Ionicons, Feather, AntDesign } from '@expo/vector-icons';
 
-export default function Header() {
+export default function Header({ navigation }) {
+
     return (
         <View style={styles.header}>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                <Text style={{ flex: 1, fontSize: 20 }}><AntDesign name="arrowleft" size={24} color="#3B3938" /></Text>
+            </TouchableOpacity>
             <Text style={{ flex: 6, fontSize: 20, textAlign: 'center', fontWeight: 'bold', color: '#3B3938' }}>Demo App</Text>
             <View style={{ flex: 2, flexDirection: 'row', fontSize: 20, fontWeight: 'bold' }}>
                 <Text style={{ paddingHorizontal: 10 }}>
