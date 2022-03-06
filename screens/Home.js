@@ -54,7 +54,7 @@ export default function Home({ navigation }) {
             <StatusBar
                 translucent
                 barStyle="light-content"
-                backgroundColor='#66B57C'
+                backgroundColor='#15B699'
             />
             <Header navigation={navigation}></Header>
 
@@ -198,7 +198,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         minHeight: '100%',
-        marginTop: StatusBar.currentHeight,
     },
     bodyContainer: {
         paddingVertical: 5,

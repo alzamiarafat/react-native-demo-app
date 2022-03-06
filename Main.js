@@ -43,7 +43,7 @@ export default function Main() {
                         // You can return any component that you like here!
                         return <AntDesign name={iconName} size={27} color={color} />;
                     },
-                    tabBarActiveTintColor: '#66B57C',
+                    tabBarActiveTintColor: '#15B699',
                     tabBarInactiveTintColor: 'gray',
                     tabBarLabelStyle: {
                         fontSize: 15,
